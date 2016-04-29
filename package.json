@@ -1,0 +1,49 @@
+{
+  "name": "not-mercury-boilerplate",
+  "version": "0.0.0",
+  "description": "Basic well documented project layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "semistandard && tape './src/**/test.js' | tap-spec",
+    "build": "gulp build",
+    "dev": "gulp build && budo src/index.js --open --live --pushstate -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisinajar/not-mercury-boilerplate.git"
+  },
+  "keywords": [
+    "mercury",
+    "nhg",
+    "not-mercury",
+    "virtual-dom",
+    "boilerplate"
+  ],
+  "author": "Chris Vickery <chrisinajar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisinajar/not-mercury-boilerplate/issues"
+  },
+  "homepage": "https://github.com/chrisinajar/not-mercury-boilerplate#readme",
+  "devDependencies": {
+    "budo": "^8.2.2",
+    "degree": "^1.1.1",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sane-watch": "^1.1.2",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "invoke-handler": "^0.1.0",
+    "semistandard": "^7.0.5",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1",
+    "thermometer": "^1.4.0"
+  },
+  "dependencies": {
+    "ap": "^0.2.0",
+    "config-request": "^0.2.0",
+    "json-stylesheets": "^0.2.0",
+    "just-storage": "0.0.3",
+    "nhg": "^0.4.0"
+  }
+}
