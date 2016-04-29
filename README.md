@@ -1,2 +1,2 @@
 # not-mercury-boilerplate
-Basic well documented project layout
+Basic (hopefully eventually well documented) project layout
