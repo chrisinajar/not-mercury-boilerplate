@@ -44,6 +44,6 @@
     "config-request": "^0.2.0",
     "json-stylesheets": "^0.2.0",
     "just-storage": "0.0.3",
-    "nhg": "^0.4.0"
+    "nhg": "^0.5.0"
   }
 }
