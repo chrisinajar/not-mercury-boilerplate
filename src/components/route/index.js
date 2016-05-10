@@ -8,11 +8,10 @@ function Route () {
 
 Route.render = function (state, globalState) {
   var router = globalState.router;
-  var route = Router.render(router.router);
 
-  if (!route) {
-    route = NotFound;
-  }
-
-  return route(router.states[router.route], globalState);
+  return Router.render(
+    router.router,
+    router.states[router.route],
+    globalState
+  ) || NotFound();
 };

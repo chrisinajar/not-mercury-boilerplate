@@ -15,21 +15,12 @@ function Init (done) {
 
   insertStylesheet(require('json-stylesheets/minimal'));
 
-  // make sure we only start up once
-  var onReady = once(_onReady);
+  Router.afterEnter(state.router.router, once(onReady));
 
-  // wait for the router to full initialize before we start the render loop
-  // this prevents it from quickly rendering a 404 and then the real page
-  // once PR#3 is merged we wont need to do this anymore
-  // https://github.com/bendrucker/sour/pull/3
-  Router.hook(state.router.router, function (cb) {
-    cb();
-    setTimeout(onReady);
-  });
   // after the hook is registered start watching
   Router.watch(state.router.router);
 
-  function _onReady () {
+  function onReady () {
     StartApp(Document.body, state, App.render);
     if (typeof done === 'function') {
       done();
