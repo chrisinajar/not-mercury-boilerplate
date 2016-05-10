@@ -4,7 +4,7 @@
   "description": "Basic well documented project layout",
   "main": "index.js",
   "scripts": {
-    "test": "semistandard && tape './src/**/test.js' | tap-spec",
+    "test": "semistandard && tape './src/**/*test.js' | tap-spec",
     "build": "gulp build",
     "dev": "gulp build && budo src/index.js --open --live --pushstate -d dist"
   },

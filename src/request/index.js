@@ -1,6 +1,6 @@
 var Struct = require('nhg/struct');
 var Value = require('nhg/value');
-// var request = require('config-request');
+// var request = require('config-request')
 var storage = require('just-storage');
 
 module.exports = Request;
@@ -18,20 +18,20 @@ function Request () {
     })
   });
 
-  // @TODO When user logs in, fill in default token
+  // TODO: When user logs in, fill in default token
 
   return state;
 }
 
 Request.init = function (state) {
   return true;
-  // example hello init
-  // request.get('/hello', function (err, data) {
-  //   if (err) {
-  //     console.error(err.stack || err);
-  //     return;
-  //   }
-  //   console.log(data);
-  //   state.something.set(data);
-  // });
+// example hello init
+// request.get('/hello', function (err, data) {
+//   if (err) {
+//     console.error(err.stack || err)
+//     return
+//   }
+//   console.log(data)
+//   state.something.set(data)
+// })
 };

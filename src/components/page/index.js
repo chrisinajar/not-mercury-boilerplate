@@ -15,10 +15,8 @@ function Page () {
 }
 
 Page.render = function (state, globalState) {
-  return h('div', [
+  return h('app', [
     // Header.render(state.header),
-    h('div', [
-      Route.render(state.route, globalState)
-    ])
+    Route.render(state.route, globalState)
   ]);
 };
